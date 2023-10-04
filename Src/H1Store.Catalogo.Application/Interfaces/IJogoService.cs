@@ -9,11 +9,7 @@ namespace H1Store.Catalogo.Application.Interfaces
 {
 	public interface IJogoService
 	{
-		IEnumerable<JogoViewModel> ObterTodos();
-		Task<JogoViewModel> ObterPorId(Guid id);
-		Task<IEnumerable<JogoViewModel>> ObterPorCategoria(int codigo);
-
-		void Adicionar(NovoJogoViewModel jogo);
-		void Atualizar(JogoViewModel jogo);
-	}
+        IEnumerable<JogoViewModel> ObterTodos();
+        void Adicionar(NovoJogoViewModel jogo);
+    }
 }

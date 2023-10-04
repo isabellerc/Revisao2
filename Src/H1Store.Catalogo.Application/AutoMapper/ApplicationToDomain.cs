@@ -11,17 +11,17 @@ namespace H1Store.Catalogo.Application.AutoMapper
 {
 	public class ApplicationToDomain : Profile
 	{
-		public ApplicationToDomain()
-		{
+        public ApplicationToDomain()
+        {
 
-			CreateMap<JogoViewModel, Jogo>()
-               .ConstructUsing(q => new Jogo(q.Codigo, q.Nome, q.Idade, q.Cpf, q.primeiroNro, q.segundoNro, q.terceiroNro, q.quartoNro, q.quintoNro, q.sextoNro));
+            CreateMap<JogoViewModel, Jogo>()
+               .ConstructUsing(q => new Jogo(q.Codigo, q.Nome, q.Idade, q.Cpf, q.primeiroNro, q.segundoNro, q.terceiroNro, q.quartoNro, q.quintoNro, q.sextoNro, q.dataJogo));
 
-           
 
-        CreateMap<NovoJogoViewModel, Jogo>()
-			   .ConstructUsing(q => new Jogo(0, (q.Codigo, q.Nome, q.Idade, q.Cpf, q.primeiroNro, q.segundoNro, q.terceiroNro, q.quartoNro, q.quintoNro, q.sextoNro)));
 
-		}
-	}
+            CreateMap<NovoJogoViewModel, Jogo>()
+                   .ConstructUsing(q => new Jogo(0, q.Nome, q.Idade, q.Cpf, q.primeiroNro, q.segundoNro, q.terceiroNro, q.quartoNro, q.quintoNro, q.sextoNro, q.dataJogo));
+
+        }
+    }
 }

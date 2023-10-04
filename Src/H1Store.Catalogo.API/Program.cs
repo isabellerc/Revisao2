@@ -16,7 +16,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(DomainToApplication), typeof(ApplicationToDomain));
 
 builder.Services.AddScoped<IJogoRepository, JogoRepository>();
-builder.Services.AddScoped<IJogoService, ProdutoService>();
+builder.Services.AddScoped<IJogoService, JogoService>();
 
 
 var app = builder.Build();

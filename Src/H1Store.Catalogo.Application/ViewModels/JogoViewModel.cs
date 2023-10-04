@@ -19,6 +19,6 @@ namespace H1Store.Catalogo.Application.ViewModels
         public int quartoNro { get; set; }
         public int quintoNro { get; set; }
         public int sextoNro { get; set; }
-        public string dataJogo { get; set; }
+        public DateTime dataJogo { get; set; }
     }
 }
